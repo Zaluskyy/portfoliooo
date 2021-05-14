@@ -1,0 +1,13 @@
+.canvasSkillsAnimation {
+    height: 100%;
+    width: 100%;
+    color: white;
+    position: relative;
+}
+
+.canvasSkillsAnimation canvas {
+    border: 2px solid red;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}

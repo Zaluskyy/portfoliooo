@@ -1,0 +1,111 @@
+.projects {
+    /* padding: 50px; */
+    width: 100%;
+    height: 100%;
+    /* background-color: rgba(255, 0, 0, .5); */
+    position: relative;
+    color: white;
+    background: linear-gradient(to bottom, rgb(26, 25, 25), rgb(26, 21, 21));
+}
+
+.projects .title {
+    padding: 50px;
+    font-size: 50px;
+    font-weight: bold;
+    color: rgb(0, 195, 255);
+}
+
+.projects .slider {
+    height: 70vh;
+    width: 75vw;
+    /* background-color: red; */
+    /* border: 2px solid red; */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.projects .slide {
+    width: 640px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(0%, -50%);
+    /* z-index: 0;
+    opacity: .7; */
+    transition: .1s border;
+}
+
+.projects .main {
+    transition: .5s;
+
+    border: 2px solid red;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    opacity: 1;
+}
+
+.projects .next {
+    /* border: 2px solid brown; */
+    opacity: 0;
+}
+
+.projects .previous {
+    transition: .5s;
+    transform: translate(-100%, -50%);
+    opacity: 0;
+}
+
+.projects a h3 {
+    color: saddlebrown;
+    position: absolute;
+    left: 50%;
+    top: calc(50vh + 75px);
+    transform: translate(-50%, -50%);
+}
+
+.projects a.disabled {
+    pointer-events: none;
+    cursor: default;
+}
+
+
+
+
+.projects .githubImg {
+    /* position: absolute;
+    bottom: 100px;
+    right: 100px;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: red; */
+}
+
+.projects .githubImg img {
+    position: absolute;
+    bottom: 75px;
+    right: 75px;
+    border-radius: 15px;
+    width: 15vw;
+    border: 3px solid rgb(224, 211, 21);
+    transition: .5s border-color;
+}
+
+.projects .githubImg img:hover {
+    border-color: red;
+}
+
+
+@media (max-width: 650px) {
+    .projects .slide {
+        width: 500px;
+    }
+
+    .projects .githubImg img {
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 20vw;
+    }
+}
